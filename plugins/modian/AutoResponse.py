@@ -30,7 +30,7 @@ wds_header = u'金秋十月，碧空如洗，凉爽舒适。\
 
 def auto_response(command):
     if 'wds' in command:
-        return wds_header + modian_base_url + items_main_page + str(ckg_id)
+        return wds_header + modian_base_url + items_main_page + '/' + str(ckg_id)
     if 'rank' in command:
         ranks = rank(ckg_id)
         ret = u'集资排名 Top 10：\n'
