@@ -17,14 +17,6 @@ wds_header = u'金秋十月，碧空如洗，凉爽舒适。\
 为了在首演更好地应援我们可爱的新成员，ckg应援会准备开设集资通道。\
 所有集资所得的钱都将用于购买首演所需的应援物品。\
 希望大家都能出点力，让成员看到我们的热情吧！\n\
-为了庆祝CKG48 27号发布会\
-应援会决定拿出两个观摩的名额作为集资奖励 \
-*集资第一名即可获得 观摩名额一位\
-*参与集资 20以上即可参与抽奖（抽观摩名额一位）\
-此次集资不限所在地，全国聚聚都可以参与。\
-如因故取消赠票资格，可全额退款，或经商议后转入应援会日常运营资金。\
-出于丝芭长期运营风格的考虑，希望各位聚聚有以上心里准备。\
-活动22号晚上11点截止\
 微打赏链接：'
 
 
@@ -42,12 +34,12 @@ def auto_response(command):
         return None
 
 
-def rank(id):
+def rank(wds_id):
     rank_url = modian_base_url + backer_list_api
     page = 1
     page_size = 20
     payload = {
-        'pro_id': ckg_id,
+        'pro_id': wds_id,
         'type': 1,
         'page': page,
         'page_size': page_size
